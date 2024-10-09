@@ -6,9 +6,22 @@
 //
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+// Function to swap two variables using pointers
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int num1 = 2;
+    int num2 = 1;
+
+    // Swap the values using the swap function
+    swap(&num1, &num2);
+
+    cout << "Hello\n" << num1 << " " << num2 << endl;
     return 0;
 }
